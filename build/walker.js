@@ -1,10 +1,10 @@
 /* ********************************************************\
- * Walker - Path to Darkness
+ * Walker 〜Path to Darkness〜
  * A game about walking the long road of life.
  * Author: Esa Koskinen (mmKALLL)
  *
  * NOT FOR REDISTRIBUTION OF ANY KIND. ALL RIGHTS RESERVED.
- * Copyright (c) 2017-2018 Esa Koskinen
+ * Copyright (c) 2017-2019 Esa Koskinen
  * ********************************************************/
 
 (function () {
@@ -13,3 +13,5 @@
   }
   document.querySelector(".new-game-button").addEventListener("click", startNewGame);
 })();
+
+//# sourceMappingURL=walker.js.map

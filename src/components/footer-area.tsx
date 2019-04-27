@@ -15,8 +15,8 @@ class LikeButton extends React.Component {
 
     return(
       <React.Fragment>
-        <div class="copyright-notice"> &copy; Esa Koskinen 2019 </div>
         <button onClick={() => this.setState({ liked: true }) }>Like</button>
+        <span class="copyright-notice"> &copy; Esa Koskinen 2019 </span>
       </React.Fragment>
     )
   }

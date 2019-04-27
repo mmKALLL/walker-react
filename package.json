@@ -15,9 +15,9 @@
     }
   },
   "scripts": {
-    "watch": "rm -rf build && yarn sass & yarn tsx",
-    "sass": "sass --watch walker.sass walker.css",
-    "tsx": "babel --watch src src/*/* --out-dir build/ --presets react-app/prod"
+    "watch": "yarn sass & yarn tsx",
+    "sass": "sass --watch styles:build/styles",
+    "tsx": "babel --watch src --out-file build/walker.js --presets react-app/prod --source-maps"
   },
   "dependencies": {
     "babel-cli": "6",
