@@ -17,12 +17,12 @@
   // It is a nice effect when buttons flash and others adjust, there should be multiple transitions...
   
   body
-    font-size: 2em
     color: v(mood-text-color)
     background-color: v(mood-background-color)
     transition: background-color 2800ms cubic-bezier(0.39, 0.575, 0.565, 1), color 690ms ease-out
+    font-size: 1.2em
   
-  #all-div
+  .all-div
     width: 100%
     line-height: 1.4
   
@@ -32,19 +32,19 @@
     float: left
     max-height: 95vh
   
-  #top-div-first
+  .top-div-first
     width: 32%
     min-width: 400px
     max-width: 100%
   
-  #top-div-middle
+  .top-div-middle
     text-align: center
     width: 25%
     min-width: 360px
     max-width: 450px
     margin-bottom: 3vh // This needs to be below margin
   
-  #top-div-last
+  .top-div-last
     width: 32%
     min-width: 480px
     max-width: 100%
@@ -57,7 +57,7 @@
       max-width: 100%
       width: 100%
   
-    #footer-area
+    .footer-area
       float: right
       clear: both
 
@@ -66,16 +66,17 @@
       padding: 1.2%
 
   
-  #footer-area
+  .footer-area
     position: fixed
     right: 12px
     bottom: 12px
-    height: 20px
+    height: 1em
+    font-size: 0.7em
 
   .girl-element
     background-color: rgba(200, 140, 100, 0.25)
   
-  #message-box
+  .message-box
     min-height: 30vh
     max-height: 45.2vh
     overflow: hidden
@@ -116,7 +117,7 @@
       padding: 12px 12px 12px 12px
       background-color: rgba(150, 150, 200, 0.2)
     
-  #statusArea
+  .statusArea
     line-height: 110%
   
   .button
@@ -132,6 +133,7 @@
     max-height: auto
     // transform: scale(1)
     transition: color 10ms
+    font-size: 0.8em
   
     &.ready
       border: solid 3px v(mood-text-color)
@@ -142,7 +144,7 @@
     visibility: hidden
   
 
-  #main-title
+  .main-title
     text-align: center
     > .text-padded
       margin: 10vh

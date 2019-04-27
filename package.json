@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "watch": "yarn sass & yarn tsx",
+    "watch": "rm -rf build && yarn sass & yarn tsx",
     "sass": "sass --watch walker.sass walker.css",
     "tsx": "babel --watch src src/*/* --out-dir build/ --presets react-app/prod"
   },
