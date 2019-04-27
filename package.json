@@ -1,0 +1,19 @@
+{
+  "name": "Walker 〜Path to Darkness〜",
+  "version": "1.0.0",
+
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+
+    "globals": {
+      "walker": true
+    },
+
+    "rules": {
+      "semi": "off",
+      "padded-blocks": "off"
+    }
+  }
+}

@@ -155,7 +155,7 @@
   }
   
   .test-button {
-    /*visibility: hidden;*/
+    visibility: hidden;
   }
   
   .button.ready {
