@@ -16,5 +16,9 @@
       "semi": "off",
       "padded-blocks": "off"
     }
+  },
+  
+  "scripts": {
+    "sass": "sass walker.sass walker.css"
   }
 }
