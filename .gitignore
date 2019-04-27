@@ -49,4 +49,7 @@ build/Release
 node_modules
 
 # Sass compile sourcemaps
+.sass-cache/
 *.css.map
+*.sass.map
+*.scss.map
