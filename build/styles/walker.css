@@ -148,16 +148,25 @@
   max-width: 60%;
   height: auto;
 }
-:root .main-title > button {
+:root .main-title .button {
   border: 1px solid black;
   display: block;
   margin: 0.5em auto 0 auto;
 }
-:root .main-title > h1 {
+:root .main-title .button:hover {
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 0 2em #bbb;
+}
+:root .main-title > h1, :root .main-title h2 {
   margin: 20vh 0 20vh 0;
-  font: outline;
-  font-family: sans-serif;
-  font-weight: 800;
+  font-size: 2.4em;
+  font-family: "Charm", cursive;
+  font-weight: 200;
+}
+:root .main-title > h1 > span, :root .main-title h2 > span {
+  font-family: cursive;
+  font-weight: 200;
 }
 
 /*# sourceMappingURL=walker.css.map */

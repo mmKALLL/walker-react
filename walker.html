@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="root">
 <head>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Noto+Sans+JP|Roboto+Slab">
+  <link href="https://fonts.googleapis.com/css?family=Charm|Gloria+Hallelujah|Noto+Sans+JP|Roboto+Slab" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="build/styles/walker.css">
 </head>
 <body>
@@ -12,8 +12,13 @@
     <div class="button ready primary-action-button" id="step-forward-button">Take a step back</div>
 
   </div>
-  
-  <!-- Add scripts to be loaded here. -->
-  <script src="build/walker.js" charset="utf-8"></script>
+  <div class="footer-area"></div>
+
+    <!-- Add scripts to be loaded here. -->  
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    
+    <script src="build/walker.js"></script>
 </body>
 </html>

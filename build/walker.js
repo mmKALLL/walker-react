@@ -11,7 +11,10 @@
   function startNewGame() {
     window.location.replace("./walker.html");
   }
-  document.querySelector(".new-game-button").addEventListener("click", startNewGame);
+  var button = document.querySelector(".new-game-button");
+  if (button) {
+    button.addEventListener("click", startNewGame);
+  }
 })();
 
 //# sourceMappingURL=walker.js.map
