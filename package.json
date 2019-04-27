@@ -1,6 +1,7 @@
 {
-  "name": "Walker 〜Path to Darkness〜",
+  "name": "walker-react",
   "version": "1.0.0",
+  "private": true,
 
   "eslintConfig": {
     "env": {
