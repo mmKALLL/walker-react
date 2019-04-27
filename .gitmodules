@@ -1,3 +1,6 @@
 [submodule "zero"]
 	path = zero
 	url = https://github.com/mmKALLL/walker-zero.git
+[submodule "prototype-js"]
+	path = prototype-js
+	url = https://github.com/mmKALLL/walker-js-prototype.git
