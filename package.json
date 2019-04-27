@@ -19,6 +19,6 @@
   },
   
   "scripts": {
-    "sass": "sass walker.sass walker.css"
+    "sass": "sass --watch walker.sass walker.css"
   }
 }

@@ -1,11 +1,10 @@
 :root {
-  --mood-background-color: white;
-  --mood-text-color: black // TODO: Consider the use of softer colors, eg. #222 for text;
+  --mood-background-color: #fff;
+  --mood-text-color: #111 // TODO: Consider the use of softer colors, eg. #222 for text;
   --mood-important-text-color: #ccccff;
   --top-div-first-min-width: 400px;
   --top-div-middle-min-width: 360px;
   --top-div-last-min-width: 480px;
-  font-size: 16px;
 }
 :root body {
   background-color: var(--mood-background-color);
@@ -119,7 +118,7 @@
 }
 :root .button {
   background-color: Transparent;
-  color: var(--mood-text-color) !important;
+  color: var(--mood-text-color);
   border: solid 1px var(--mood-text-color);
   outline: none;
   overflow: visible;
