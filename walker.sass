@@ -1,5 +1,4 @@
 :root 
-  @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Noto+Sans+TC|Roboto+Slab')
   --mood-background-color: white
   --mood-text-color: black  // TODO: Consider the use of softer colors, eg. #222 for text
   --mood-important-text-color: #ccccff
@@ -137,19 +136,21 @@
   
 
   #main-title 
-    margin-top: 15vh
     text-align: center
-    > img 
+    > .text-padded
+      margin: 10vh
+    > img
       max-width: 60%
       height: auto
+    > button
+      border: 1px solid black
+      display: block
+      margin: 0.5em auto 0 auto
+    > h1 
+      margin: 20vh 0 20vh 0
+      font: outline
+      font-family: sans-serif
+      font-weight: 800
 
-  h1 
-    font: outline
-    font-family: 'Gloria Hallelujah', cursive
-    font-weight: 800
 
-  #new-game-button 
-    display: block
-    margin: auto
-    margin-top: 10vh
   
