@@ -7,8 +7,9 @@
   --top-div-last-min-width: 480px;
 }
 :root body {
-  background-color: var(--mood-background-color);
+  font-size: 2em;
   color: var(--mood-text-color);
+  background-color: var(--mood-background-color);
   transition: background-color 2800ms cubic-bezier(0.39, 0.575, 0.565, 1), color 690ms ease-out;
 }
 :root #all-div {
