@@ -2,39 +2,39 @@
   "name": "walker-react",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://walkergame.com",
+  "dependencies": {
+    "@types/node": "^11.13.8",
+    "@types/react": "^16.8.14",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.0",
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
-    "env": {
-      "browser": true
-    },
-    "globals": {
-      "walker": true
-    },
+    "extends": "react-app",
     "rules": {
       "semi": "never",
       "padded-blocks": "off"
     }
   },
-  "scripts": {
-    "watch": "yarn sass & yarn babel",
-    "sass": "sass --watch styles:build/styles",
-    "babel": "babel --watch src --out-file walker.js --source-maps",
-    "check-types": "tsc --jsx react"
-  },
-  "dependencies": {
-    "@types/node": "^11.13.8",
-    "@types/react": "^16.8.6",
-    "@types/react-dom": "^16.8.4",
-    "babel-cli": "7.0.0-beta.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
-  "devDependencies": {
-    "@babel/core": "7.4.0",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-    "@babel/preset-env": "7.4.1",
-    "@babel/preset-react": "7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
-    "typescript": "^3.4.5"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,7 +1,18 @@
+
+/* ********************************************************\
+ * Walker 〜Path to Darkness〜
+ * A game about walking the long road of life.
+ * Author: Esa Koskinen (mmKALLL)
+ *
+ * NOT FOR REDISTRIBUTION OF ANY KIND. ALL RIGHTS RESERVED.
+ * Copyright (c) 2017-2019 Esa Koskinen
+ * ********************************************************/
+
 Game, design, code, non-font assets, images, text, and everything else related:
-  Copyright (c) Esa Koskinen, 2019. All rights reserved.
+  Copyright (c) Esa Koskinen, 2017-2019. All rights reserved.
   Not for redistribution of any kind. Source code provided for reference purposes only.
 
 Fonts:
-  Roboto Slab licenced under Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0) 
-  Gloria Hallelujah and Noto Sans JP licensed under OFL (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web).
+  Roboto Slab licenced under Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+  Charm, Gloria Hallelujah, and Noto Sans JP licensed under OFL (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web).
+
