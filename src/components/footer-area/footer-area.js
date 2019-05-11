@@ -4,10 +4,9 @@ import './footer-area.sass'
 
 export default class FooterArea extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { liked: false };
+    super(props)
+    this.state = { liked: false }
   }
-
 
   render() {
     return(
