@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.sass'
 import MainMenu from './components/main-menu/main-menu';
+import GameView from './components/action-panel/action-panel';
 
 export default class App extends Component {
   constructor(props: any) {
@@ -29,4 +30,21 @@ export default class App extends Component {
       </div>
     )
   }
+}
+
+function GameScreen(props: any) {
+  if (props.screenName === 'main-menu') {
+    return (
+      <MainMenu startNewGame={props.startNewGame} />
+    )
+  } else if (props.screenName === 'intro') {
+    return (
+      <Cutscene text={['Money Match Games presents', 'The 40th Esagame']} bgColor='#ffffff' fadeTime='2000ms' textScreenTime='2000ms' endHandler={props.finishIntro} />
+    )
+  } else if (props.screenName === 'in-game-main') {
+    return (
+      <GameView takeStepHandler={props.takeStepHandler} />
+    )
+  }
+
 }
