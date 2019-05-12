@@ -29,7 +29,7 @@ export default class Cutscene extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.advanceText, 1000);
+    this.interval = setInterval(() => this.advanceText, this.props.textScreenTime + this.props.textFadeTime * 2);
   }
 
   componentWillUnmount() {
@@ -39,7 +39,11 @@ export default class Cutscene extends React.Component<Props, State> {
   }
 
   currentText = () => this.props.text[this.state.textIndex]
+
   advanceText = () => this.setState((state: State) => {
+    if (state.textIndex >= this.props.text.length) {
+      this.props.endHandler()
+    }
     return {
       textStartTime: Date.now(),
       textIndex: state.textIndex + 1
@@ -59,6 +63,9 @@ export default class Cutscene extends React.Component<Props, State> {
 function CutsceneText(props: { text: string, settings: TextSettings }) {
   return (
     <>
+      <div className='cutscene-text'>
+        { props.text }
+      </div>
     </>
   )
 }
