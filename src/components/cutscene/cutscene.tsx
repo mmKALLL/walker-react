@@ -1,4 +1,5 @@
 import React from 'react'
+import './cutscene.sass'
 
 interface Props extends TextSettings {
   text: string[]
