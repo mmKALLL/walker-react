@@ -18,7 +18,7 @@ interface State {
 }
 
 export default class Cutscene extends React.Component<Props, State> {
-  private interval: NodeJS.Timeout? = null
+  private interval: NodeJS.Timeout | null = null
 
   constructor(props: Props) {
     super(props)
