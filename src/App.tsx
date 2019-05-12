@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.sass'
 import MainMenu from './components/main-menu/main-menu';
 import GameView from './components/action-panel/action-panel';
+import Cutscene from './components/cutscene/cutscene';
 
 export default class App extends Component {
   constructor(props: any) {
