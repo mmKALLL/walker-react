@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './cutscene.sass'
 
 interface Props extends TextSettings {
@@ -17,53 +17,35 @@ interface State {
   textIndex: number
 }
 
-export default class Cutscene extends React.Component<Props, State> {
-  private interval: number | null = null
+export default function Cutscene(props: Props) {
+  const [textIndex, setTextIndex] = useState(0)
+  const lastIndex = props.text.length
 
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      textIndex: 0
+  const advanceText = () => setTextIndex(textIndex + 1)
+
+  useEffect(() => {
+    if (textIndex >= lastIndex) {
+      props.endHandler()
+      return
     }
-  }
+    const interval = setInterval(advanceText, props.textScreenTime + props.textFadeTime * 2)
+    return () => clearInterval(interval)
+  })
 
-  componentDidMount() {
-    this.interval = window.setInterval(() => this.advanceText, this.props.textScreenTime + this.props.textFadeTime * 2);
-  }
+  const currentText = () => props.text[textIndex]
 
-  componentWillUnmount() {
-    if (this.interval) {
-      clearInterval(this.interval);
-    }
-  }
-
-  currentText = () => this.props.text[this.state.textIndex]
-
-  advanceText = () => {
-    if (this.state.textIndex >= this.props.text.length) {
-      this.props.endHandler()
-    }
-    this.setState((state: State) => {
-      return {
-        textIndex: state.textIndex + 1
-      }
-    })
-  }
-
-  render() {
     return (
       <>
-        <CutsceneText text={this.currentText()} settings={ this.props } />
+        <CutsceneText text={currentText()} settings={ props } />
    {/* text={['Money Match Games presents', 'The 40th Esagame']} bgColor='#ffffff' fadeTime='2000ms' textScreenTime='2000ms' endHandler={props.finishIntro} */}
       </>
     )
-  }
 }
 
 function CutsceneText(props: { text: string, settings: TextSettings }) {
   return (
     <>
-      <div className='cutscene-text'>
+      <div className='cutscene-text' style={{ color: props.settings.textColor, backgroundColor: props.settings.bgColor }}>
         { props.text }
       </div>
     </>
