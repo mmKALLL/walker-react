@@ -40,7 +40,7 @@ function GameScreen(props: any) {
     )
   } else if (props.screenName === 'intro') {
     return (
-      <Cutscene text={['Money Match Games presents', 'The 40th Esagame']} textFadeTime={2000} textScreenTime={2000} bgColor='#fff' textColor='#111' endHandler={props.finishIntro} />
+      <Cutscene text={['Money Match Games presents', 'The 40th Esagame']} textFadeTime={150} textScreenTime={800} bgColor='#fff' textColor='#1f1' endHandler={props.finishIntro} />
     )
   } else if (props.screenName === 'in-game-main') {
     return (

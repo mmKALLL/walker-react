@@ -14,23 +14,21 @@ interface TextSettings {
 }
 
 interface State {
-  textStartTime: number,
   textIndex: number
 }
 
 export default class Cutscene extends React.Component<Props, State> {
-  private interval: NodeJS.Timeout | null = null
+  private interval: number | null = null
 
   constructor(props: Props) {
     super(props)
     this.state = {
-      textStartTime: Date.now(),
       textIndex: 0
     }
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.advanceText, this.props.textScreenTime + this.props.textFadeTime * 2);
+    this.interval = window.setInterval(() => this.advanceText, this.props.textScreenTime + this.props.textFadeTime * 2);
   }
 
   componentWillUnmount() {
@@ -41,15 +39,16 @@ export default class Cutscene extends React.Component<Props, State> {
 
   currentText = () => this.props.text[this.state.textIndex]
 
-  advanceText = () => this.setState((state: State) => {
-    if (state.textIndex >= this.props.text.length) {
+  advanceText = () => {
+    if (this.state.textIndex >= this.props.text.length) {
       this.props.endHandler()
     }
-    return {
-      textStartTime: Date.now(),
-      textIndex: state.textIndex + 1
-    }
-  })
+    this.setState((state: State) => {
+      return {
+        textIndex: state.textIndex + 1
+      }
+    })
+  }
 
   render() {
     return (
