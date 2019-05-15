@@ -37,7 +37,6 @@ export default function Cutscene(props: Props) {
     return (
       <>
         <CutsceneText text={currentText()} settings={ props } />
-   {/* text={['Money Match Games presents', 'The 40th Esagame']} bgColor='#ffffff' fadeTime='2000ms' textScreenTime='2000ms' endHandler={props.finishIntro} */}
       </>
     )
 }

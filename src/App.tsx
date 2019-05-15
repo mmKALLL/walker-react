@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './App.sass'
 import MainMenu from './components/main-menu/main-menu';
-import GameView from './components/action-panel/action-panel';
 import Cutscene from './components/cutscene/cutscene';
+import InGameView from './components/in-game-view/in-game-view';
 
 export default class App extends Component<{}, { gameScreen: string }> {
   constructor(props: any) {
@@ -44,7 +44,7 @@ function GameScreen(props: any) {
     )
   } else if (props.screenName === 'in-game-main') {
     return (
-      <GameView takeStepHandler={props.takeStepHandler} />
+      <InGameView takeStepHandler={props.takeStepHandler} />
     )
   } else {
     return (

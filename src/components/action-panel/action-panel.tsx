@@ -5,7 +5,7 @@ interface Props {
   takeStepHandler: (steps: number) => void
 }
 
-export default function GameView(props: Props) {
+export default function ActionPanel(props: Props) {
   return (
     <>
       <Button text="Step forward" className="button primary-action-button" onClick={props.takeStepHandler(1)} />
