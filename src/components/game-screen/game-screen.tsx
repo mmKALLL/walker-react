@@ -31,7 +31,7 @@ export default class GameScreen extends React.Component<{}, { screenName: string
       )
     } else if (this.state.screenName === 'intro') {
       return (
-        <Cutscene text={['Money Match Games presents', 'The 40th Esagame']} textFadeTime={150} textScreenTime={800} bgColor='#fff' textColor='#1f1' endHandler={this.finishIntro} />
+        <Cutscene text={['Money Match Games presents', 'The 40th Esagame']} textFadeTime={250} textScreenTime={400} bgColor='#fff' textColor='#111' endHandler={this.finishIntro} />
       )
     } else if (this.state.screenName === 'in-game-main') {
       return (

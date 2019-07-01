@@ -24,7 +24,7 @@ export default class InGameView extends React.Component<{}, State> {
         <ActionPanel
             takeStepHandler={(steps) => this.setState((state) => ({
               stepCount: state.stepCount + Math.abs(steps),
-              position: state.stepCount + steps
+              position: state.position + steps
             }))}
             />
         <FooterArea />

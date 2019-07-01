@@ -3,8 +3,8 @@ import React from 'react'
 export default function StatusArea(props) {
   return (
     <>
-      { props.stepCount }
-      { props.position }
+      Step count: { props.stepCount }<br />
+      Current position: { props.position }<br />
     </>
   )
 }
