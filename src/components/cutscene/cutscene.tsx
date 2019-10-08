@@ -34,11 +34,11 @@ export default function Cutscene(props: Props) {
 
   const currentText = () => props.text[textIndex]
 
-    return (
-      <>
-        <CutsceneText text={currentText()} settings={ props } />
-      </>
-    )
+  return (
+    <>
+      <CutsceneText text={currentText()} settings={ props } />
+    </>
+  )
 }
 
 function CutsceneText(props: { text: string, settings: TextSettings }) {

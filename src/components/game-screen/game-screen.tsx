@@ -1,7 +1,8 @@
 import React from 'react'
 import MainMenu from '../main-menu/main-menu';
 import Cutscene from '../cutscene/cutscene';
-import InGameView from '../in-game-view/in-game-view';
+import InGameView, { GameState } from '../in-game-view/in-game-view';
+import { loadGame, saveFileExists } from '../../utils/save-file-utils';
 
 
 export default class GameScreen extends React.Component<{}, { screenName: string }> {
@@ -42,7 +43,7 @@ export default class GameScreen extends React.Component<{}, { screenName: string
       )
     } else if (this.state.screenName === 'in-game-main') {
       return (
-        <InGameView initialState={loadGame()} />
+        <InGameView initialState={saveFileExists ? loadGame() : initialState} />
       )
     } else {
       return (
@@ -52,4 +53,20 @@ export default class GameScreen extends React.Component<{}, { screenName: string
       )
     }
   }
+}
+
+export const initialState: GameState = {
+  stepCount: 0,
+  position: 0, // Can step both forward and back
+  mood: {
+    overall: 40,
+    r: 0,
+    g: 0,
+    b: 0,
+  },
+  time: {
+    day: 0,
+    second: 0,
+    paused: false
+  },
 }

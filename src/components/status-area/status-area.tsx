@@ -1,6 +1,11 @@
 import React from 'react'
 
-export default function StatusArea(props) {
+interface Props {
+  stepCount: number,
+  position: number
+}
+
+export default function StatusArea(props: Props) {
   return (
     <>
       Step count: { props.stepCount }<br />

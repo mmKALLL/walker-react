@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import './App.sass'
 import GameScreen from './components/game-screen/game-screen';
 
-export default class App extends Component<{}, { gameScreen: string }> {
-  constructor(props: any) {
-    super(props)
-  }
-
+export default class App extends Component<{}, {}> {
   render() {
     return (
       <div className="App">
