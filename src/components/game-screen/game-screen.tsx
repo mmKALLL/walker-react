@@ -18,6 +18,13 @@ export default class GameScreen extends React.Component<{}, { screenName: string
     })
   }
 
+  startSavedGame = () => {
+    console.log('load game')
+    this.setState({
+      screenName: 'in-game-main'
+    })
+  }
+
   finishIntro = () => {
     this.setState({
       screenName: 'in-game-main'
@@ -27,15 +34,15 @@ export default class GameScreen extends React.Component<{}, { screenName: string
   render() {
     if (this.state.screenName === 'main-menu') {
       return (
-        <MainMenu startNewGame={this.startNewGame} />
+        <MainMenu startNewGame={this.startNewGame} startSavedGame={this.startSavedGame} />
       )
     } else if (this.state.screenName === 'intro') {
       return (
-        <Cutscene text={['Money Match Games presents', 'The 40th Esagame']} textFadeTime={250} textScreenTime={400} bgColor='#fff' textColor='#111' endHandler={this.finishIntro} />
+        <Cutscene text={['Money Match Games presents', 'The 40th Studio Esagames production', 'This game is a product of fiction.', 'Any similarity to real-world names, places, or events is purely coincidental.', 'Not suitable for children or those who are easily disturbed.']} textFadeTime={250} textScreenTime={600} bgColor='#fff' textColor='#111' endHandler={this.finishIntro} />
       )
     } else if (this.state.screenName === 'in-game-main') {
       return (
-        <InGameView />
+        <InGameView initialState={loadGame()} />
       )
     } else {
       return (
